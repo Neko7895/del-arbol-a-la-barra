@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#302016">
+  <title>CIAGUA LAB — Del Árbol a la Barra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main id="app">
+
+    <!-- PANTALLA 1: HOME -->
+    <section id="welcome-screen" class="screen welcome">
+
+    <div class="brand" id="brand">
+    <img
+        src="./assets/images/lab.png"
+        alt="CIAGUA LAB"
+        style="width: 300px; height: auto; display: block;"
+        onload="console.log('Logo cargado correctamente')"
+        onerror="console.log('Error al cargar el logo')"
+    >
+    </div>
+
+      <h1 id="main-title">Del Árbol a la Barra</h1>
+
+        <button id="cacao-button" class="cacao-button" aria-label="Tocar el árbol de cacao para comenzar">
+            <img src="assets/images/cacao.png" alt="Árbol de cacao" class="cacao-image">
+        </button>
+
+        <p id="touch-hint" class="touch-hint">Toca el árbol para descubrir su recorrido</p>
+
+      <div class="language-selector">
+        <button
+          id="spanish-button"
+          class="language-button active"
+          type="button"
+          aria-pressed="true"
+        >
+          Español
+        </button>
+
+        <button
+          id="english-button"
+          class="language-button"
+          type="button"
+          aria-pressed="false"
+        >
+          English
+        </button>
+      </div>
+        
+      <footer class="sponsors">
+        <img src="assets/images/patrocinador1.png" alt="Patrocinador 1">
+        <img src="assets/images/patrocinador2.png" alt="Patrocinador 2">
+        </footer>
+    </section>
+
+
+    <!-- PANTALLA 2: RECORRIDO DE SEIS ETAPAS -->
+    <section id="journey-screen" class="screen journey" hidden>
+
+      <header class="journey-header">
+        <p id="journey-label" class="eyebrow">
+          EL RECORRIDO
+        </p>
+
+        <p id="stage-counter">ETAPA 1 DE 6</p>
+      </header>
+
+      <div class="progress-track" aria-hidden="true">
+        <div id="progress-bar"></div>
+      </div>
+
+      <article class="stage-content">
+
+        <p id="stage-number" class="stage-number">01</p>
+
+        <div
+          id="stage-visual"
+          class="stage-visual"
+          aria-hidden="true"
+        >
+          🌱
+        </div>
+
+        <h2 id="stage-title">El origen de nuestro grano</h2>
+
+        <p id="stage-description">
+          Nuestro cacao proviene de cultivos ubicados en la
+          Cuenca Hidrográfica del Canal de Panamá, Capira,
+          Coclé y Colón.
+        </p>
+
+      </article>
+
+      <nav
+        class="journey-controls"
+        aria-label="Navegación del recorrido"
+      >
+        <button
+          id="back-button"
+          class="secondary-button"
+          type="button"
+          disabled
+        >
+          Anterior
+        </button>
+
+        <button
+          id="next-button"
+          class="primary-button"
+          type="button"
+        >
+          Siguiente etapa
+        </button>
+      </nav>
+
+        <footer class="sponsors">
+            <img src="assets/images/patrocinador1.png" alt="Patrocinador 1">
+            <img src="assets/images/patrocinador2.png" alt="Patrocinador 2">
+        </footer>
+    </section>
+
+
+    <!-- PANTALLA 3: PRODUCTO FINAL -->
+    <section id="product-screen" class="screen product" hidden>
+
+      <p id="product-label" class="eyebrow">
+        EL FINAL DEL RECORRIDO
+      </p>
+
+        <div class="product-visual">
+        <img src="assets/images/chocolate1.jpg" alt="Chocolate de cacao panameño">
+        <img src="assets/images/chocolate2.jpg" alt="Detalle del chocolate">
+        </div>
+
+      <h2 id="product-title">
+        Del cacao al chocolate
+      </h2>
+
+      <p id="product-description">
+        La ciencia y el trabajo de nuestros productores
+        transforman el cacao en chocolate de calidad,
+        dando valor a cada etapa del proceso.
+      </p>
+
+      <button
+        id="restart-button"
+        class="primary-button"
+        type="button"
+      >
+        Volver al inicio
+      </button>
+
+        <footer class="sponsors">
+        <img src="assets/images/patrocinador1.png" alt="Patrocinador 1">
+        <img src="assets/images/patrocinador2.png" alt="Patrocinador 2">
+        </footer>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
